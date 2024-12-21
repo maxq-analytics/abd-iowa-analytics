@@ -1,4 +1,5 @@
-Welcome to the Alcoholic Beverage Department for the State of Iowa data model!
+### Goal of project
+This project is built to showcase the tooling and logic behind modeling multi-source data through dbt.
 
 ### Source of the data
 
