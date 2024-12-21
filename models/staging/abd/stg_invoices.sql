@@ -57,7 +57,7 @@ where
     1 = 1 
     and date_day >= '2013-1-1'
     and item_id is not null -- A handfull of invoices don't have an item_id
-    and invoice_id is not null -- A handfull of invoices don't have an invoice_id
+    
     
 -- development    
 -- and item_id = 65259
