@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: abd_iowa_custom
+    database: eternal-ship-306122
+    description: Alcoholic Beverages Division | State of Iowa | Custom data mapping
+    schema: abd_iowa_custom
+    loader: BigQuery
+    tables:
+      - name: items
+        
