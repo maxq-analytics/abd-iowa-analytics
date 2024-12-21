@@ -6,7 +6,7 @@ This project is built to showcase the tooling and logic behind modeling multi-so
 #### Source of the data
 
 The beverage data has been provided by the Alcoholic Beverage Department for the State of Iowa. 
-This dataset has be published monthly since 2012: https://data.iowa.gov/Sales-Distribution/Iowa-Liquor-Sales/m3tr-qhgy/about_data
+This [dataset](https://data.iowa.gov/Sales-Distribution/Iowa-Liquor-Sales/m3tr-qhgy/about_data) has be published monthly since 2012 and is widely used to teach junior data engineers and data scientist to interact with large datasets. The dataset contains 30 mln rows of individual invoices sent by the ABD Iowa to Liquor retailers in the state.
 
 #### Structure of the model
 
