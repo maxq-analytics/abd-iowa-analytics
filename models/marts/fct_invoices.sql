@@ -10,6 +10,7 @@ select
 
     -- Timestamps
     invoices.date_day,
+    invoices.date_day_time,
 
     -- Properties | Store
     invoices.store_name,
