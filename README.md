@@ -1,3 +1,5 @@
+Welcome to the ABD Iowa data model!
+
 ### Goal of project
 This project is built to showcase the tooling and logic behind modeling multi-source data through dbt.
 
