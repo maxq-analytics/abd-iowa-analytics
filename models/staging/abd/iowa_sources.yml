@@ -4,7 +4,7 @@ sources:
   - name: iowa_liquor_sales
     database: eternal-ship-306122
     description: Alcoholic Beverages Division | State of Iowa
-    schema: marketing_data_report
+    schema: abd_iowa_liquor_sales
     loader: BigQuery
     tables:
       - name: iowa_liquor_sales
