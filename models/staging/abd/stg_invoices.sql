@@ -17,6 +17,7 @@ with
 
             -- Timestamps
             date(date) as date_day,
+            timestamp(date) as date_day_time,
 
             -- Properties | Store
             safe_cast(
