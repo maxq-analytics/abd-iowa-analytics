@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: utility
+    database: eternal-ship-306122
+    schema: abd_iowa_custom
+    loader: BigQuery
+    tables:
+      - name: definitions
+        
