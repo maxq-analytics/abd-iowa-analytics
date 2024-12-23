@@ -2,7 +2,7 @@
 -- UNION ALL of individual data freshness tests
 -- Master Data Set generation by MAXQ Analytics using dbt Cloud
 select
-    current_timestamp() as freshness_timestamp,
+    datetime(current_timestamp()) as freshness_timestamp,
     'Master Data' as dataset_name,
     'dbt' as tool,
     'Transformation' as pipeline_step,
@@ -17,7 +17,7 @@ union all
 
 -- Custom Items | Google Sheets
 select
-    max(extracted_at) as freshness_timestamp,
+    datetime(max(extracted_at)) as freshness_timestamp,
     'Custom Input' as dataset_name,
     'BigQuery' as tool,
     'Extract' as pipeline_step,
@@ -32,7 +32,7 @@ UNION ALL
 
 -- ABD Iowa Invoices | BigQuery
 select
-    max(date_day_time) as freshness_timestamp,
+    datetime(max(date_day_time)) as freshness_timestamp,
     'ABD Iowa' as dataset_name,
     'BigQuery' as tool,
     'Extract' as pipeline_step,
