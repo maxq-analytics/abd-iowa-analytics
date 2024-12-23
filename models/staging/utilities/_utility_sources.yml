@@ -1,10 +1,11 @@
 version: 2
 
 sources:
-  - name: utility
+  - name: utilities
     database: eternal-ship-306122
     schema: abd_iowa_custom
     loader: BigQuery
     tables:
       - name: definitions
+      - name: metric_catalog
         

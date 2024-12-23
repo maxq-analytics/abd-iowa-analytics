@@ -11,6 +11,6 @@ select
         definition_url,
         definition_description,
 
-FROM {{ ref('stg_gsheets__definitions') }}
+FROM {{ ref('stg_utilities__definitions') }}
 
 ORDER BY definition_id ASC

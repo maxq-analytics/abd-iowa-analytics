@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source("utility", "definitions") }}
+    select * from {{ source("utilities", "definitions") }}
 
 ),
 
