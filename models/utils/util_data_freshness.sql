@@ -1,3 +1,5 @@
+{{ config(materialized="table") }}
+
 -- Summary of calculations
 -- UNION ALL of individual data freshness tests
 -- Master Data Set generation by MAXQ Analytics using dbt Cloud
@@ -22,13 +24,14 @@ select
     'BigQuery' as tool,
     'Extract' as pipeline_step,
     'MAXQ / Philip Boontje' as pipeline_step_operator,
-    'https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1seternal-ship-306122!2sabd_iowa_custom!3sitems' as pipeline_step_url,
+    'https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1seternal-ship-306122!2sabd_iowa_custom!3sitems'
+    as pipeline_step_url,
     'Extraction step by BigQuery pulling data from linked Google Sheet' as description,
     'UTC' as timezone,
     'Instant' as frequency
-from {{ ref('stg_abd_iowa_custom__items') }}
+from {{ ref("stg_abd_iowa_custom__items") }}
 
-UNION ALL
+union all
 
 -- ABD Iowa Invoices | BigQuery
 select
@@ -37,8 +40,9 @@ select
     'BigQuery' as tool,
     'Extract' as pipeline_step,
     'MAXQ / Philip Boontje' as pipeline_step_operator,
-    'https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1seternal-ship-306122!2sabd_dbt!3sfct_invoices' as pipeline_step_url,
+    'https://console.cloud.google.com/bigquery?ws=!1m5!1m4!4m3!1seternal-ship-306122!2sabd_dbt!3sfct_invoices'
+    as pipeline_step_url,
     'Extraction step by BigQuery pulling data from public source' as description,
     'UTC' as timezone,
     'Every month' as frequency
-from {{ ref('stg_invoices') }}
+from {{ ref("stg_invoices") }}
