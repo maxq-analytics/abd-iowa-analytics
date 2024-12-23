@@ -38,7 +38,7 @@ models:
       staging:
         materialized: table
       utils:
-        materialized: view 
+        materialized: table
       marts:
         materialized: view 
       external:
