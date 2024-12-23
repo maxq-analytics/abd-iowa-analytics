@@ -57,7 +57,7 @@ from renamed
 where
     1 = 1 
     and date_day >= '2013-1-1'
-    and item_id is not null -- A handfull of invoices don't have an item_id
+    
     
     
 -- development    
