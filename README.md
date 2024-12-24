@@ -12,6 +12,7 @@ This [dataset](https://data.iowa.gov/Sales-Distribution/Iowa-Liquor-Sales/m3tr-q
 
 The data transformations are structured with the following layers:
 - Staging (stg)
+- Utilities (util)
 - Marts (dim & fct)
 - External (ext)
 

@@ -20,3 +20,4 @@ select
     case when brand_name is null then 'Unmapped Brand' else brand_name end as brand_name
 
 from renamed
+ORDER BY item_id asc
