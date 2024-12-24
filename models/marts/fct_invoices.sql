@@ -37,5 +37,5 @@ select
 from {{ ref("stg_invoices") }} as invoices
 
 
-left join {{ ref('stg_abd_iowa_custom__items') }} as items on items.item_id = invoices.item_id
+left join {{ ref('dim_items') }} as items on items.item_id = invoices.item_id
 
