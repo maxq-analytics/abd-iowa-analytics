@@ -16,7 +16,7 @@ select
     ) as data_quality_resolution_url,
     'DET_001' as test_id
 
-from {{ ref("stg_abd_iowa_custom__items") }}
+from {{ ref('dim_items') }}
 
 
 UNION ALL
@@ -39,7 +39,7 @@ select
         null
     ) as data_quality_resolution_url,
     'DET_002' as test_id
-from {{ ref('stg_invoices') }}
+from {{ ref('fct_invoices') }}
 
 UNION ALL
 
@@ -62,7 +62,7 @@ select
     ) as data_quality_resolution_url,
     'DET_003' as test_id
 
-from {{ ref('stg_invoices') }}
+from {{ ref('fct_invoices') }}
 
 
 -- development
