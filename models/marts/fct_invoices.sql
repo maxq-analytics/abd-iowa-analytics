@@ -42,5 +42,5 @@ from {{ ref("stg_invoices") }} as invoices
 
 
 left join {{ ref('dim_items') }} as items on items.item_id = invoices.item_id
-left join {{ ref('dim_companies') }} as companies on companies.company_id = invoices.store_id
+left join {{ ref('dim_companies') }} as companies on companies.store_id = invoices.store_id
 
