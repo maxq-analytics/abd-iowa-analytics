@@ -28,7 +28,7 @@ select
     when stamp = 14 then 9823388764
     when stamp = 15 then 5831256436
     else null
-  end as owner_id,
+  end as company_id,
   case 
     when stamp = 1 then 'Helloprint'
     when stamp = 2 then 'Talent Sourcing Partner'
@@ -46,6 +46,6 @@ select
     when stamp = 14 then 'Equans'
     when stamp = 15 then 'HubSpot'
     else null
-  end as owner_name
+  end as company_name
 from stamped
 order by store_id asc

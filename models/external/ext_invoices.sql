@@ -26,9 +26,9 @@ select
     -- Properties | Items
     invoices.brand_name,
 
-    --Properties | Owners
-    invoices.owner_id,
-    invoices.owner_name,
+    --Properties | Companies
+    invoices.company_id,
+    invoices.company_name,
 
     -- Measures | Invoice
     invoices.bottles_per_pack,

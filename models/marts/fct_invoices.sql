@@ -26,9 +26,9 @@ select
     -- Properties | Items
     items.brand_name,
 
-    --Properties | Owners
-    owners.owner_id,
-    owners.owner_name,
+    -- Properties | Companies
+    companies.company_id,
+    companies.company_name,
 
     -- Measures | Invoice
     invoices.bottles_per_pack,
@@ -36,11 +36,11 @@ select
     invoices.bottles_sold,
     invoices.retail_value_items_sold,
     invoices.volume_per_bottle_liters,
-    invoices.volume_sold_liters,
+    invoices.volume_sold_liters
 
 from {{ ref("stg_invoices") }} as invoices
 
 
 left join {{ ref('dim_items') }} as items on items.item_id = invoices.item_id
-left join {{ ref('dim_owners') }} as owners on owners.store_id = invoices.store_id
+left join {{ ref('dim_companies') }} as companies on companies.company_id = invoices.store_id
 
